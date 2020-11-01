@@ -3,6 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./popup.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
@@ -11,6 +13,8 @@
 <body>
 
 <!-- container & title -->
+
+
 <div class="container">
   <h1 class="text-center">The Online Cafe Chat</h1>
   <!-- buttons for chatrooms -->
@@ -48,6 +52,7 @@
     </div>
     <div class="update-mssg"></div>
   </form>
+  <button class="btn btn-outline-primary back" id = "button"><a href = "../customer/popup.html">Back to home</a></button>
 </div>
 
 <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
@@ -78,5 +83,96 @@
 <script src="scripts/chat.js"></script>
 <script src="scripts/ui.js"></script>
 <script src="scripts/app.js"></script>
+<script>
+  const stars=document.querySelectorAll(".star");
+  const output=document.querySelector("p");
+  let IdValue;
+  for(x=0;x<stars.length;x++){
+    stars[x].starvalue=x+1;
+    ["click","mouseover","mouseout"].forEach(function(e){
+      stars[x].addEventListener(e,showrating);
+
+    })
+  }
+  function showrating(e){
+    let type=e.type;
+    starvalue=this.starvalue;
+    IdValue=starvalue;
+    if(type==="click"){
+      if(starvalue>= 1)
+      {
+        feedBack(starvalue);
+
+      }
+    }
+    stars.forEach(function(element,index){
+      if(type==="click"){
+        if(index<starvalue){
+          element.classList.add("orange");
+
+        }
+        else{
+          element.classList.remove("orange");
+        }
+      }
+      else if(type==="mouseover"){
+
+        if(index<starvalue){
+          element.classList.add("yellow");
+        }
+        else{
+          element.classList.remove("yellow");
+        }
+
+      }
+      if(type==="mouseout"){
+
+        element.classList.remove("yellow");
+
+
+      }
+    })
+  }
+
+  function feedBack(starvalue){
+
+    if(starvalue==1){
+      output.innerHTML="&#128545"+"Very Bad!!"+"&#128545";
+    }
+    else if(starvalue==2){
+      output.innerHTML="&#128532"+"Tolerrable!!"+"&#128532";
+    }
+    else if(starvalue==3){
+      output.innerHTML="&#128528"+"Fair!!"+"&#128528";
+    }
+    else if(starvalue==4){
+      output.innerHTML="&#128578"+"Excellent!!"+"&#128578";
+    }
+    else if(starvalue==5){
+      output.innerHTML="&#128512"+"Awesome!!"+"&#128512";
+    }
+
+  }
+  function getValue(){
+    //alert(IdValue);
+
+  }
+  function Close(){
+    document.querySelector('.main').style.display = "none";
+
+  }
+
+  document.getElementById('buttons').addEventListener("click", function() {
+    document.querySelector('.main').style.display = "block";
+
+  });
+
+  document.addEventListener('mouseup', function(e) {
+    var container = document.querySelector('#id01');
+    if (!container.contains(e.target)) {
+      document.querySelector(".main").style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
