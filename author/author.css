@@ -1,0 +1,155 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+
+#sidebar {
+    position:absolute;
+    top:0px;
+    left:-200px;
+    width:200px;
+    height:100%;
+    background:#151719;
+    transition:all 300ms linear;
+}
+#sidebar.active {
+    left:0px;
+}
+#sidebar .toggle-btn {
+    position:absolute;
+    left:220px;
+    top:10px;
+}
+#sidebar .toggle-btn span {
+    display:block;
+    width:30px;
+    height:5px;
+    background:#151719;
+    margin:5px 0px;
+    cursor:pointer;
+    border-radius: 3px;
+}
+#sidebar div.list div.item {
+    padding:15px 10px;
+    border-bottom:1px solid #444;
+    color:#fcfcfc;
+    text-transform:uppercase;
+    font-size:15px;
+}
+
+
+
+
+
+
+body{
+    margin:0px;
+    padding: 0px;
+}
+header footer{border-radius: 20px;}
+
+
+
+
+
+.a{ padding-top: 10px;
+    text-align: right;
+    font-style: italic;
+    padding-right: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+.containerflex{
+    display: flex;
+    margin: 25px 0px;
+    padding-left: 100px
+}
+.child1{
+    background-color: burlywood;
+    width: 40%;
+    height: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 20px 10px 0px turquoise ;
+    margin-right: 60px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+header{
+    background-color: darkslategrey;
+    width:100%;
+    height: 10%;
+}
+footer{
+    background-color: darkslategrey;
+    width:100%;
+    height: 13%;
+    padding: 20px;
+}
+
+
+/*
+.Rh2{
+    background-color: darkslateblue;
+    font-size: x-large;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4px;
+}*/
+.fot_lft{
+    font-family: sans-serif;
+    font-weight: bolder;
+    display: inline;
+    padding-right: 8%;vertical-align: middle;
+    padding-left: 8.5%;
+}
+.d{
+    color: blanchedalmond;
+    text-decoration: none;
+
+}
+.copyright{padding-top: 10px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+

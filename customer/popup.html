@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="pop.css">
+
+    <title>Star Rating</title>
+</head>
+<body>
+<button  id ="buttons" >Open</button>
+
+<div class="main" >
+    <div id="id01" class="container">
+        <div class="star-rating">
+
+            <ul class="stars">
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+            </ul>
+            <p class="output">Rate Please!!</p><br>
+            <button class="next" onclick="getValue()">Submit</button>
+            <span class="close" onclick="Close()">X</button>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const stars=document.querySelectorAll(".star");
+    const output=document.querySelector("p");
+    let IdValue;
+    for(x=0;x<stars.length;x++){
+        stars[x].starvalue=x+1;
+        ["click","mouseover","mouseout"].forEach(function(e){
+            stars[x].addEventListener(e,showrating);
+
+        })
+    }
+    function showrating(e){
+        let type=e.type;
+        starvalue=this.starvalue;
+        IdValue=starvalue;
+        if(type==="click"){
+            if(starvalue>= 1)
+            {
+                feedBack(starvalue);
+
+            }
+        }
+        stars.forEach(function(element,index){
+            if(type==="click"){
+                if(index<starvalue){
+                    element.classList.add("orange");
+
+                }
+                else{
+                    element.classList.remove("orange");
+                }
+            }
+            else if(type==="mouseover"){
+
+                if(index<starvalue){
+                    element.classList.add("yellow");
+                }
+                else{
+                    element.classList.remove("yellow");
+                }
+
+            }
+            if(type==="mouseout"){
+
+                element.classList.remove("yellow");
+
+
+            }
+        })
+    }
+
+    function feedBack(starvalue){
+
+        if(starvalue==1){
+            output.innerHTML="&#128545"+"Very Bad!!"+"&#128545";
+        }
+        else if(starvalue==2){
+            output.innerHTML="&#128532"+"Tolerrable!!"+"&#128532";
+        }
+        else if(starvalue==3){
+            output.innerHTML="&#128528"+"Fair!!"+"&#128528";
+        }
+        else if(starvalue==4){
+            output.innerHTML="&#128578"+"Excellent!!"+"&#128578";
+        }
+        else if(starvalue==5){
+            output.innerHTML="&#128512"+"Awesome!!"+"&#128512";
+        }
+
+    }
+    function getValue(){
+        alert(IdValue);
+
+    }
+    function Close(){
+        document.querySelector('.main').style.display = "none";
+
+    }
+
+    document.getElementById('buttons').addEventListener("click", function() {
+        document.querySelector('.main').style.display = "block";
+
+    });
+
+    document.addEventListener('mouseup', function(e) {
+        var container = document.querySelector('#id01');
+        if (!container.contains(e.target)) {
+            document.querySelector(".main").style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.mainblock{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    margin-top:20px;
+}
+.card:hover{
+    transform: scale(1.02);
+    transition: 1s all ;
+    box-shadow: 10px 10px 8px #888888;
+}
+@media(max-width:960px){
+    .mainblock{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.bottom{
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color:#343a40;
+    color:white;
+    justify-content: center;
+}
+.bottom p{
+    text-align: center;
+    margin: auto;
+}

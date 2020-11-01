@@ -1,0 +1,34 @@
+.container{
+  max-width: 600px;
+  background-color: wheat;
+  height:500px;
+  margin: 100px auto;
+  border-radius: 10px;
+  box-shadow: 16px 16px 16px grey;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+}
+
+input{
+  color:white;
+  font-weight: bolder;;
+}
+.container h1{
+  color:black;
+  font-weight: bolder;
+  font-style: italic;
+}
+.btn{
+  margin-right: 20px;
+  color: black;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+.btn:focus{
+  outline: none !important;
+}
