@@ -1,0 +1,26 @@
+body{
+    background-image: linear-gradient(to right, #acb6e5, #86fde8);
+}
+.main_box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.card{
+    position: relative;
+    margin:20px;
+    z-index: 1;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .card{
+        width:50%;
+    }
+}
