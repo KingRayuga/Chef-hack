@@ -2,12 +2,12 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="pop.css">
+    <link rel="stylesheet" type="text/css" href="./popup.css">
 
     <title>Star Rating</title>
 </head>
 <body>
-<button  id ="buttons" >Open</button>
+
 
 <div class="main" >
     <div id="id01" class="container">
@@ -21,8 +21,8 @@
                 <li class="star"><i class="fa fa-star"></i></li>
             </ul>
             <p class="output">Rate Please!!</p><br>
-            <button class="next" onclick="getValue()">Submit</button>
-            <span class="close" onclick="Close()">X</button>
+            <button class="next"> <a href="../index.php"> Submit </a></button>
+            <span class="close" ><a href="../index.php"> X </a></button>
 
 
         </div>
@@ -100,7 +100,7 @@
 
     }
     function getValue(){
-        alert(IdValue);
+        //alert(IdValue);
 
     }
     function Close(){
@@ -108,10 +108,8 @@
 
     }
 
-    document.getElementById('buttons').addEventListener("click", function() {
-        document.querySelector('.main').style.display = "block";
+    document.querySelector('.main').style.display = "block";
 
-    });
 
     document.addEventListener('mouseup', function(e) {
         var container = document.querySelector('#id01');
