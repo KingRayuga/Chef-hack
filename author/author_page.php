@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnlineCafe Author</title>
     <link rel="stylesheet" href="author.css">
-    <script>function toggleSidebar(ref){
+    <script>function toggleSidebar(ref)
+        {
             document.getElementById("sidebar").classList.toggle('active');
         }</script>
 </head>
@@ -18,8 +19,8 @@
     <div class="list">
         <div class="item"><a href="" class="d"> Home </a></div>
         <div class="item"><a href="author.html" class="d">Profile</a> </div>
-        <div class="item">Projects</div>
         <div class="item">Earning</div>
+        <div class="item"><a href = "../chat-app/index.html"> connect TO user </a></div>
         <div class="item"><a href="author.html" class="d"> Logout</a></div>
     </div>
 </div>
